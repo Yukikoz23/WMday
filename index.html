@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <title>働くママパパの1日</title>
+    <link rel="stylesheet" href="css/styles.css">
+  </head>
+  <body>
+    <header>
+      <h1>働くママパパの1日</h1>
+      <p>子育て × 仕事 どう乗り切ってる？あなたの1日を円グラフにしよう。</p>
+    </header>
+
+    <section>
+      <h2>プロフィール</h2>
+      <ul id="input-profile">
+        <li>
+          <label>
+            ママ <input type="radio" id="mama" name="gender" value="ママ" checked>
+          </label>
+          <label>
+            パパ <input type="radio" id="papa" name="gender" value="パパ">
+          </label>
+        </li>
+        <li><label>名前 <input type="text" id="name"></label></li>
+        <li><label>年齢 <input type="number" id="age" value="30"> 歳</label></li>
+        <li><label>職業 <input type="text" id="job"></label></li>
+        <li>
+          <label>勤務時間
+            <input type="time" id="working-start" step="1800"> 〜
+            <input type="time" id="working-end" step="1800">
+          </label>
+        </li>
+        <li>
+          <label>子供の人数・年齢<br>
+            <input type="text" id="child">
+          </label>
+        </li>
+        <li>
+          <label>育児家事における周囲のサポート<br>
+            <input type="text" id="support">
+          </label>
+        </li>
+        <li>
+          <label>コメント<br>
+            <textarea></textarea>
+          </label>
+        </li>
+      </ul>
+      <h2>1日のタイムスケジュール</h2>
+      <p>開始時刻を基準にスケジュールを入力してください。（６文字以内）</p>
+      <div>
+        <table>
+          <tr>
+            <th>0:00</th>
+            <td><input type="text"></td>
+          </tr>
+          <tr>
+            <th>1:00</th>
+            <td><input type="text"></td>
+          </tr>
+          <tr>
+            <th>2:00</th>
+            <td><input type="text"></td>
+          </tr>
+          <tr>
+            <th>3:00</th>
+            <td><input type="text"></td>
+          </tr>
+          <tr>
+            <th>4:00</th>
+            <td><input type="text"></td>
+          </tr>
+          <tr>
+            <th>5:00</th>
+            <td><input type="text"></td>
+          </tr>
+          <tr>
+            <th>6:00</th>
+            <td><input type="text"></td>
+          </tr>
+          <tr>
+            <th>7:00</th>
+            <td><input type="text"></td>
+          </tr>
+          <tr>
+            <th>8:00</th>
+            <td><input type="text"></td>
+          </tr>
+          <tr>
+            <th>9:00</th>
+            <td><input type="text"></td>
+          </tr>
+          <tr>
+            <th>10:00</th>
+            <td><input type="text"></td>
+          </tr>
+          <tr>
+            <th>11:00</th>
+            <td><input type="text"></td>
+          </tr>
+        </table>
+        <table>
+          <tr>
+            <th>12:00</th>
+            <td><input type="text"></td>
+          </tr>
+          <tr>
+            <th>13:00</th>
+            <td><input type="text"></td>
+          </tr>
+          <tr>
+            <th>14:00</th>
+            <td><input type="text"></td>
+          </tr>
+          <tr>
+            <th>15:00</th>
+            <td><input type="text"></td>
+          </tr>
+          <tr>
+            <th>16:00</th>
+            <td><input type="text"></td>
+          </tr>
+          <tr>
+            <th>17:00</th>
+            <td><input type="text"></td>
+          </tr>
+          <tr>
+            <th>18:00</th>
+            <td><input type="text"></td>
+          </tr>
+          <tr>
+            <th>19:00</th>
+            <td><input type="text"></td>
+          </tr>
+          <tr>
+            <th>20:00</th>
+            <td><input type="text"></td>
+          </tr>
+          <tr>
+            <th>21:00</th>
+            <td><input type="text"></td>
+          </tr>
+          <tr>
+            <th>22:00</th>
+            <td><input type="text"></td>
+          </tr>
+          <tr>
+            <th>23:00</th>
+            <td><input type="text"></td>
+          </tr>
+        </table>
+      </div>
+    </section>
+
+    <p id="error-count" class="hidden">エラー！ 2つ以上のスケジュールを入力してください。</p>
+    <p id="error-textlength" class="hidden">エラー！ 6文字以内で入力してください。</p>
+    <button id="generate-btn">円グラフを作る</button>
+    <p id="arrow" class="hidden">▼</p>
+
+    <section id="graph" class="hidden">
+      <h2></h2>
+      <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li class="comment"></li>
+      </ul>
+      <canvas>
+        Canvas not supported!
+      </canvas>
+      <button id="save">円グラフをダウンロード</button>
+    </section>
+
+    <footer>
+      <a href="https://twitter.com/yk_180822" target="_blank">&copy;2019 yuki</a>
+    </footer>
+    <script src="js/main.js"></script>
+  </body>
+</html>
